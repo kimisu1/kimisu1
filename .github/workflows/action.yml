@@ -1,7 +1,7 @@
 # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
 name: Metrics
 on:
-  # Schedule updates (each hour)
+  # At 00:00 UTC everyday
   schedule: [{cron: "0 0 * * *"}]
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
@@ -23,6 +23,7 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_secrets: yes
           plugin_achievements_threshold: C
+          plugin_achievements_display: compact
           plugin_activity: yes
           plugin_activity_days: 14
           plugin_activity_filter: all
@@ -43,3 +44,4 @@ jobs:
           plugin_languages_colors: github
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
+          plugin_languages_skipped: cordova-plugin-tun2socks-udp-associate
